@@ -1,20 +1,38 @@
-<!-- 
-Simple Omelette Recipe 
+FAQs 
 
-An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats. 
 
-Preparation time Total: Approximately 10 minutes Preparation: 5 minutes Cooking: 5 minutes Ingredients 2-3 large eggs Salt, to taste Pepper, to taste 1 tablespoon of butter or oil Optional fillings: cheese, diced vegetables, cooked meats, herbs 
+What is Frontend Mentor, and how will it help me? 
 
-Instructions Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture. Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil. Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface. Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette. Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate. Enjoy: Serve hot, with additional salt and pepper if needed. 
+Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building. 
 
-Nutrition 
 
-The table below shows nutritional values per serving without the additional fillings. 
+Is Frontend Mentor free? 
 
-Calories 277kcal 
-Carbs 0g 
-Protein 20g 
-Fat 22g
+Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels. 
+
+
+Can I use Frontend Mentor projects in my portfolio? 
+
+Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers! 
+
+
+How can I get help if I'm stuck on a Frontend Mentor challenge? 
+
+The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.
+
 
 Challenge by Frontend Mentor. Coded by Your Name Here.
- -->  
+
+
+
+
+
+
+
+
+
+<h1>FAQs</h1>
+    <button id="1">What is Frontend Mentor, and how will it help me? </button><br>
+    <button id="2">Is Frontend Mentor free? </button><br>
+    <button id="3">Can I use Frontend Mentor projects in my portfolio? </button><br>
+    <button id="4">How can I get help if I'm stuck on a Frontend Mentor challenge?</button>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FAQ-page.css">
+</head>
+<body>
+    <h1>FAQs</h1>
+    <button class="accordion">What is Frontend Mentor, and how will it help me? </button><br>
+    <div class="panel">
+        <p>Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building. </p>
+    </div>
+    
+    <button id="2">Is Frontend Mentor free? </button><br>
+    <button id="3">Can I use Frontend Mentor projects in my portfolio? </button><br>
+    <button id="4">How can I get help if I'm stuck on a Frontend Mentor challenge?</button>
+
+    <script>
+        let acc = document.getElementsByClassName("accordion");
+        let i;
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";
+        } else {
+        panel.style.display = "block";
+        }
+        });
+        }
+
+    </script>
+
+</body>
+</html>
