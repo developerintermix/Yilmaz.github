@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(255, 233, 205);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  h2 {
+    color: rgba(165, 42, 42, 0.547);
+  }
+  
+  .card {
+    background-color: white;
+    padding: 10%;
+    margin: 19%;
+    border-radius: 30px;
+  }
+  .card__content{
+      font-weight: lighter;
+  }
+  
+  .card__list-a{
+      background-color: rgba(241, 159, 171, 0.773);
+      border-radius: 20px;
+      padding-bottom: 39px;
+      padding-top: 19px;
+  }
+  
+  .card__list-b li{
+      padding-bottom: 10px;
+  }
+  
+  .card__list-c{
+      margin-right: 15%;
+  }
+  
+  .card__list-d li{
+      border-bottom: 1px solid rgb(178, 169, 169);
+      padding: 12px;
+  }
+  .card__list-d li:last-of-type {
+      border-bottom: none;
+  }
+  
+  .card__number{
+      padding: 0%;
+  }
+  .card__number li {
+      padding-bottom: 10px;
+  }
+  
+  ol { counter-reset: item; }
+  ol li { display: block; }
+  ol li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: rgba(169, 26, 26, 0.547);
+  padding-right: 11px; }
+  
+  
+  .card__img{
+      height: 300px;
+      width: 400px;
+      border-radius: 20px;
+  }
