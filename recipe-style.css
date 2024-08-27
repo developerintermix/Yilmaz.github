@@ -8,10 +8,9 @@ h2 {
 }
 
 .card {
-  margin: 30%;
   background-color: white;
-  padding: 5%;
-  margin: 20%;
+  padding: 13%;
+  margin: 18%;
   border-radius: 30px;
 }
 .card__content{
@@ -21,8 +20,8 @@ h2 {
 .card__list-a{
     background-color: rgba(241, 159, 171, 0.773);
     border-radius: 20px;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    padding-bottom: 29px;
+    padding-top: 29px;
 }
 
 .card__list-b li{
@@ -57,6 +56,7 @@ padding-right: 11px; }
 
 
 .card__img{
-    height: 245px;
+    height: 200px;
+    width: 380px;
     border-radius: 20px;
 }
