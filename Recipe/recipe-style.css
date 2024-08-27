@@ -7,6 +7,10 @@ h2 {
   text-align: center 20%;
 }
 
+body {
+    text-align: center;
+}
+
 .card {
   background-color: white;
   padding: 4%;
@@ -23,6 +27,7 @@ h2 {
     padding-bottom: 29px;
     padding-top: 29px;
     padding-left: 100px;
+    color: black;
 }
 .card__list-b{
     padding-left: 100px;
@@ -53,6 +58,7 @@ ul.card__list-d {
     list-style-type: none ;
     padding: 0;
     margin: 0;
+    padding-left: 50px;
 }
 
 .card__list-d li:last-of-type {
@@ -78,4 +84,7 @@ padding-right: 11px; }
     height: 430px;
     width: 900px;
     border-radius: 20px;
+}
+strong{
+    color: rgb(0, 0, 0);
 }
