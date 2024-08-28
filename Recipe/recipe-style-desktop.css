@@ -1,9 +1,18 @@
+
+.young-serif-regular h1 {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 h2 {
     color: #7A284E;
 }
 
 .card {
+    /* max-width: 500px; */
     background-color: white;
+    margin: 0 32px;
   }
 
 .card__content{
@@ -11,11 +20,14 @@ h2 {
 }
 
 body { 
-    width: 375px;
+    max-width: 375px;
     height: 1872px;
 }
+.card__list-a h2{
+    color: #854632;
+}
 
-.eerste{
+/* .eerste{
     height: 216px;
     width: 311px;
 }
@@ -44,17 +56,18 @@ body {
     padding-top: 32px;
     height: 292px;
     width: 311px;
-}
+} */
+
+
 
 .card__list-a{
     background-color: #FFF7FB;
     border-radius: 20px;
-    color: black;
+    /* color: black; */
 }
 
 .card__list-b li{
     padding-bottom: 10px;
-    padding-left: 50px;
 }
 
 .card__list-d li{
@@ -62,24 +75,21 @@ body {
 }
 
 .card__img{
-    height: 171px;
-    width: 375px;
+    width: 100%;
     border-radius: 20px;
 }
 
-.vijfde {
+.card__list-d {
+    /* margin: 0;
+    padding: 0; */
+    list-style-type: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.card__list-d {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
 strong {
     color: #312E2C;
+    font-weight: 600;
 }
 
