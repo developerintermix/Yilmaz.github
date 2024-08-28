@@ -1,63 +1,85 @@
-body {
-    background-color: rgb(255, 233, 205);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  h2 {
-    color: rgba(165, 42, 42, 0.547);
-  }
-  
-  .card {
+h2 {
+    color: #7A284E;
+}
+
+.card {
     background-color: white;
-    padding: 10%;
-    margin: 19%;
-    border-radius: 30px;
   }
-  .card__content{
-      font-weight: lighter;
-  }
-  
-  .card__list-a{
-      background-color: rgba(241, 159, 171, 0.773);
-      border-radius: 20px;
-      padding-bottom: 39px;
-      padding-top: 19px;
-  }
-  
-  .card__list-b li{
-      padding-bottom: 10px;
-  }
-  
-  .card__list-c{
-      margin-right: 15%;
-  }
-  
-  .card__list-d li{
-      border-bottom: 1px solid rgb(178, 169, 169);
-      padding: 12px;
-  }
-  .card__list-d li:last-of-type {
-      border-bottom: none;
-  }
-  
-  .card__number{
-      padding: 0%;
-  }
-  .card__number li {
-      padding-bottom: 10px;
-  }
-  
-  ol { counter-reset: item; }
-  ol li { display: block; }
-  ol li:before {
-  content: counter(item) ". ";
-  counter-increment: item;
-  color: rgba(169, 26, 26, 0.547);
-  padding-right: 11px; }
-  
-  
-  .card__img{
-      height: 300px;
-      width: 400px;
-      border-radius: 20px;
-  }
+
+.card__content{
+    color: #5F564D;
+}
+
+body { 
+    width: 375px;
+    height: 1872px;
+}
+
+.eerste{
+    height: 216px;
+    width: 311px;
+}
+
+.tweede{
+    padding-top: 32px;
+    height: 196px;
+    width: 311px;
+}
+
+.derde{
+    padding-top: 32px;
+    height: 228px;
+    width: 311px;
+    padding-bottom: 32px;
+}
+
+.vierde{
+    padding-top: 32px;
+    height: 668px;
+    width: 311px;
+    padding-bottom: 32px;
+}
+
+.vijfde{
+    padding-top: 32px;
+    height: 292px;
+    width: 311px;
+}
+
+.card__list-a{
+    background-color: #FFF7FB;
+    border-radius: 20px;
+    color: black;
+}
+
+.card__list-b li{
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
+.card__list-d li{
+    border-bottom: 1px solid rgb(178, 169, 169);
+}
+
+.card__img{
+    height: 171px;
+    width: 375px;
+    border-radius: 20px;
+}
+
+.vijfde {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card__list-d {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+strong {
+    color: #312E2C;
+}
+

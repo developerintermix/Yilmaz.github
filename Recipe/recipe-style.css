@@ -9,16 +9,48 @@ h2 {
 
 body {
     text-align: center;
+    width: 375px;
+    height: 1872px;
 }
 
 .card {
   background-color: white;
   padding: 4%;
   border-radius: 30px;
+  
 }
 
 .card__content{
-    font-weight: lighter;
+    font-weight: #5F564D;
+}
+
+.eerste{
+    height: 216px;
+    width: 311px;
+}
+
+.tweede{
+    padding-top: 32px;
+    height: 196px;
+    width: 311px;
+}
+
+.derde{
+    padding-top: 32px;
+    height: 228px;
+    width: 311px;
+}
+
+.vierde{
+    padding-top: 64px;
+    height: 668px;
+    width: 311px;
+}
+
+.vijfde{
+    padding-top: 64px;
+    height: 292px;
+    width: 311px;
 }
 
 .card__list-a{
@@ -81,8 +113,8 @@ color: #7A284E;
 padding-right: 11px; }
 
 .card__img{
-    height: 430px;
-    width: 900px;
+    height: 171px;
+    width: 375px;
     border-radius: 20px;
 }
 strong{
