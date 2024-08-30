@@ -6,7 +6,8 @@
   }
   
 h2 {
-    color: #7A284E;
+    
+    color: #854632;
 }
 
 .card {
@@ -20,11 +21,12 @@ h2 {
 }
 
 body { 
-    max-width: 375px;
-    height: 1872px;
+    max-width: 430px;
+    height: 1600px;
 }
 .card__list-a h2{
-    color: #854632;
+    color: #7A284E;
+
 }
 
 /* .eerste{
@@ -74,11 +76,6 @@ body {
     border-bottom: 1px solid rgb(178, 169, 169);
 }
 
-.card__img{
-    width: 100%;
-    border-radius: 20px;
-}
-
 .card__list-d {
     /* margin: 0;
     padding: 0; */
@@ -88,6 +85,10 @@ body {
     gap: 20px;
 }
 
+.card__img{
+    width: 100%;
+    border-radius: 20px;
+}
 strong {
     color: #312E2C;
     font-weight: 600;
