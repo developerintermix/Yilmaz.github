@@ -7,20 +7,19 @@
 .wrapper {
     max-width: 75%;
     margin: auto;
-
 }
 
 .wrapper > p, 
-.wrapper > h1 {
+.wrapper > .text h1 {
     margin: 1.5rem 0;
     text-align: center;
 }
 
-.wrapper > h1 {
+ .wrapper > .text h1 { /* Even goed naar kijken!!! */
     letter-spacing: 3px;
 }
 
-.accordion {
+.faq-item__accordion {
     background-color: white;
     color: rgba(0, 0, 0, 0.8);
     cursor: pointer;
@@ -37,11 +36,11 @@
 }
 
 .active, 
-.accordion:hover{
+.faq-item__accordion:hover{
     background-color: #f1f7f5;
 }
 
-.pannel {
+.faq-item__content {
     padding: 0 2rem 2.5rem 2rem;
     background-color: white;
     overflow: hidden;
@@ -49,57 +48,17 @@
     display: none;
 }
 
-.pannel p {
+.faq-item__content p {
     color: rgba(0, 0, 0, 0.7);
     font-size: 1.2rem;
     line-height: 1.4;
 }
 
-.faq {
+.faq-item {
     border: 1px solid rgba(0, 0, 0, 0.2);
     margin: 10px 0;
 }
 
-.faq.active {
+.faq-item.active {
     border: none;
 }
-
-
-
-
-
-
-
-
-
-
-/* .faq {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    margin: 10px 0;
-} */
-
-
-
-
-/* .accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-}
-
-.active, .accordion:hover{
-    background-color: #ccc;
-}
-
-.panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-} */
