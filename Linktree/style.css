@@ -1,0 +1,75 @@
+body{
+    max-width: 1440px;
+    background-color: rgb(20, 20, 20);
+    display: grid;
+    justify-content: center;
+}
+.contact-card {
+    border: 3px solid rgb(0, 0, 0);
+    max-width: 440px;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(31, 31, 31);
+    padding: 3.5rem;
+}
+
+.card__content{
+    color: black;
+}
+
+.card__buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+}
+
+.card__button{
+    color: white;
+    background-color: rgb(51, 51, 51);
+    border-radius: 8px;
+    padding: 1.1em;
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.card__button:hover{
+    color: black;
+    background-color: rgb(196, 248, 42);
+}
+
+.card__image img{
+    border-radius: 80px;
+    
+}
+
+.card__title{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 1px;
+}
+
+
+.card__sub-title {
+    color: rgb(196, 248, 42);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    
+}
+
+.card__intro{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-top: 40px;
+    padding-bottom: 10px;
+}
