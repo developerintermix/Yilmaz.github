@@ -3,14 +3,20 @@ body{
     background-color: rgb(20, 20, 20);
     display: grid;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
+
 .contact-card {
     border: 3px solid rgb(0, 0, 0);
     max-width: 440px;
     align-items: center;
     text-align: center;
     background-color: rgb(31, 31, 31);
-    padding: 3.5rem;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .card__content{
@@ -33,6 +39,7 @@ body{
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+    transition: 0.4s;
 }
 
 .card__button:hover{
@@ -42,7 +49,9 @@ body{
 
 .card__image img{
     border-radius: 80px;
-    
+    height: 110px;
+    width: 110px;
+    padding-bottom: 10px;
 }
 
 .card__title{
@@ -53,7 +62,6 @@ body{
     font-style: normal;
     margin-bottom: 1px;
 }
-
 
 .card__sub-title {
     color: rgb(196, 248, 42);
