@@ -1,0 +1,11 @@
+body{
+    background-color: #E4F4FD;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.content-card{
+    padding: 7.5rem 7rem;
+    border: 2px solid;
+    text-align: center;
+}
