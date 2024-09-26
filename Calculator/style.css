@@ -3,9 +3,26 @@ body{
     display: grid;
     align-items: center;
     justify-content: center;
-}
-.content-card{
-    padding: 7.5rem 7rem;
-    border: 2px solid;
     text-align: center;
 }
+.card__begin{
+    display: flex;
+    margin: 10px;
+}
+.content-card{
+    /* padding: 7.5rem 7rem; */
+    border: 2px solid;
+    text-align: center;
+    background-color: white;
+}
+
+.card__left p, h1{
+    color: #4E6E7E;
+}
+
+/* .card__title{
+    text-align: left;
+}
+.card__reset-button{
+    text-align: right;
+} */
