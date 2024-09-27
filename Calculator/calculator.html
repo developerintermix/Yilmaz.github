@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
     <title>Hypotheek Calculator</title>
     <link rel="stylesheet" href="style.css">
@@ -31,6 +31,57 @@
         </div>
 
 
+    </div>
+</body>
+</html> -->
+
+<html>
+<head>
+    <title>Hypotheek Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-card">
+            <div class="card__left">
+                <div class="card__header">
+                    <h1 class="card__title">Mortgage Calculator</h1>
+                    <button class="card__reset-button">Clear All</button>
+                </div>
+                <div class="card__amount">
+                    <label>Mortgage Amount</label>
+                    <input type="number" class="card__input" name="amount" placeholder="£">
+                </div>
+                <div class="card__terms">
+                    <div class="card__term">
+                        <label>Mortgage Term</label>
+                        <input type="number" class="card__input" name="years" placeholder="years">
+                    </div>
+                    <div class="card__interest">
+                        <label>Interest Rate</label>
+                        <input type="number" class="card__input" name="percent" placeholder="%">
+                    </div>
+                </div>
+                <div class="card__type">
+                    <label>Mortgage Type</label>
+                    <div class="card__radio">
+                        <input type="radio" id="repayment" name="mortgage-type" value="repayment">
+                        <label for="repayment">Repayment</label>
+                    </div>
+                    <div class="card__radio">
+                        <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
+                        <label for="interest-only">Interest Only</label>
+                    </div>
+                </div>
+                <button class="card__submit">Calculate Repayments</button>
+            </div>
+            <div class="card__right">
+                <div class="card__results">
+                    <p>Results shown here</p>
+                    <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

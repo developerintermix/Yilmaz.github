@@ -1,4 +1,4 @@
-body{
+/* body{
     background-color: #E4F4FD;
     display: grid;
     align-items: center;
@@ -10,7 +10,7 @@ body{
     margin: 10px;
 }
 .content-card{
-    /* padding: 7.5rem 7rem; */
+    padding: 7.5rem 7rem;
     border: 2px solid;
     text-align: center;
     background-color: white;
@@ -18,11 +18,116 @@ body{
 
 .card__left p, h1{
     color: #4E6E7E;
+} */
+
+/* Algemene container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e6f2f2;
 }
 
-/* .card__title{
-    text-align: left;
+.content-card {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
 }
-.card__reset-button{
-    text-align: right;
-} */
+
+/* Linkerzijde - Calculator form */
+.card__left {
+    flex: 1;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card__reset-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.card__amount,
+.card__terms,
+.card__type {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card__terms {
+    display: flex;
+    gap: 20px;
+}
+
+.card__radio {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card__radio input {
+    margin-right: 10px;
+}
+
+.card__submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #b5e61d;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.card__right {
+    flex: 1;
+    background-color: #0d4b4b;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card__results p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
