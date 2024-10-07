@@ -44,6 +44,10 @@
     flex: 1;
     padding: 40px;
     background-color: #ffffff;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .card__header {
@@ -56,6 +60,7 @@
     font-size: 24px;
     font-weight: bold;
     margin: 0;
+    color: #133041;
 }
 
 .card__reset-button {
@@ -64,6 +69,7 @@
     color: #007bff;
     cursor: pointer;
     font-size: 14px;
+    text-decoration: underline;
 }
 
 .card__amount,
@@ -76,14 +82,50 @@ label {
     display: block;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #6B94A8;
+}
+
+
+.card__amount div,
+.recht__zetten {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.form__symbol, 
+.recht__zetten p {
+    background-color: #e6f2f2;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    color: #6B94A8; 
+    font-weight: bold;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    text-align: center;
+}
+
+.recht__zetten input {
+    border: none; 
+    padding: 10px;
+    flex: 1;
 }
 
 .card__input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    border: none; 
+}
+
+.card__input:focus {
+    outline: none;
 }
 
 .card__terms {
@@ -95,28 +137,40 @@ label {
     display: flex;
     align-items: center;
     margin-top: 10px;
+    border: #6B94A8 solid 1px;
+    border-radius: 7px;
+    padding: 5px;
 }
 
 .card__radio input {
     margin-right: 10px;
 }
 
+.card__radio label {
+    color: #133041;
+    padding-left: 5px;
+}
+
 .card__submit {
-    width: 100%;
+    width: 75%;
     padding: 15px;
-    background-color: #b5e61d;
-    color: #333;
+    background-color: #D8DB2F;
+    color: #133041;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 /* Rechterzijde */
 .card__right {
     flex: 1;
-    background-color: #0d4b4b;
+    background-color: #133041;
     color: white;
     padding: 40px;
     display: flex;
@@ -124,6 +178,10 @@ label {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.card__results-a {
+    margin-bottom: 20px;
 }
 
 /* .card__results p {

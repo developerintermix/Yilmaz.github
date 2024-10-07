@@ -1,39 +1,80 @@
-<!-- <html>
+
+<html>
 <head>
     <title>Hypotheek Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="content-card">
-        <div class="card__buttons">
-
+    <div class="container">
+        <div class="content-card">
             <div class="card__left">
-                <div class="card__begin">
-                        <h1 class="card__title">Mortage Calculator</h1>
-                        <button class="card__reset-button"> Clear all</button>
+                <div class="card__header">
+                    <h1 class="card__title">Mortgage Calculator</h1>
+                    <button class="card__reset-button">Clear All</button>
                 </div>
                 <div class="card__amount">
-                    <p>Mortage Amount</p>
-                    <input type="number" class="card__amount-money" name="amount" placeholder="...">
+                    <label>Mortgage Amount</label>
+                    <div>
+                        <p class="form__symbol">%</p>
+                        <input type="number" class="card__input" name="amount" >
+                    </div>
                 </div>
+                <div class="card__terms">
                     <div class="card__term">
-                        <p>Mortage Term</p>
-                        <input type="number" class="card__term-years" name="years" placeholder="...">
+                        <label>Mortgage Term</label>
+                        <div class="recht__zetten">
+                            <p>years</p>
+                            <input type="number" class="card__input" name="years">
+                        </div>
                     </div>
                     <div class="card__interest">
-                        <p>Mortage Term</p>
-                        <input type="number" class="card__interest-rates" name="percent" placeholder="...">
-                    </div>
+                        <label>Interest Rate</label>
+                        <input type="number" class="card__input" name="percent" placeholder="%">
                     </div>
                 </div>
+                <div class="card__type">
+                    <label>Mortgage Type</label>
+                    <div class="card__radio">
+                        <input type="radio" id="repayment" name="mortgage-type" value="repayment">
+                        <label for="repayment">Repayment</label>
+                    </div>
+                    <div class="card__radio">
+                        <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
+                        <label for="interest-only">Interest Only</label>
+                    </div>
+                </div>
+                <button class="card__submit">Calculate Repayments</button>
             </div>
-
+            <div class="card__right">
+                <div class="card__results">
+                    <h2 class="card__results-a">Results shown here</h2>
+                    <p class="card__results-b">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+                </div>
+            </div>
         </div>
-
-
     </div>
+    <script src="script.js"></script>
 </body>
-</html> -->
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -51,7 +92,7 @@
 <body>
     <div class="container">
         <div class="content-card">
-            
+            <!-- Linker kant van de kaart -->
             <div class="card__left">
                 <div class="card__header">
                     <h1 class="card__title">Mortgage Calculator</h1>
@@ -98,6 +139,7 @@
                 <button class="card__submit">Calculate Repayments</button>
             </div>
 
+            <!-- Rechter kant van de kaart -->
             <div class="card__right">
                 <div class="card__results">
                     <h2 class="card__results-a">Results shown here</h2>
