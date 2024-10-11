@@ -60,9 +60,9 @@
 
                 <div class="card__amount">
                     <label>Mortgage Amount</label>
-                    <div>
+                    <div class="card__amount-input" id="card__amount-color">
                         <p class="form__symbol">£</p>
-                        <input type="number" class="card__input" name="amount" placeholder="Enter amount">
+                        <input type="number" class="card__input" id="amount"  name="amount" placeholder="Enter amount">
                     </div>
                 </div>
 
@@ -70,14 +70,14 @@
                     <div class="card__term">
                         <label>Mortgage Term</label>
                         <div class="recht__zetten">
-                            <input type="number" class="card__input" name="years" placeholder="Term in years">
+                            <input type="number" class="card__input" id="term" name="years" placeholder="Term in years">
                             <p>years</p>
                         </div>
                     </div>
                     <div class="card__interest">
                         <label>Interest Rate</label>
                         <div class="recht__zetten">
-                            <input type="number" class="card__input" name="percent" placeholder="Interest rate">
+                            <input type="number" class="card__input" id="rate" name="percent" placeholder="Interest rate">
                             <p>%</p>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
 
-                <button class="card__submit">Calculate Repayments</button>
+                <button onclick="getNumber()" class="card__submit">Calculate Repayments</button>
             </div>
 
             <div class="card__right">
