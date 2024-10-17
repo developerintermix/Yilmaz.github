@@ -103,13 +103,19 @@ label {
     margin-bottom: 10px;
     color: #6B94A8;
 }
+.repay,
+.interest {
+    color: #133041;
+}
+
+
 
 
 .card__amount div,
 .recht__zetten {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc; 
+    border: 1px solid  #6B94A8; 
     border-radius: 5px;
     overflow: hidden;
 }
@@ -119,8 +125,9 @@ label {
 .recht__zetten p {
     background-color: #e6f2f2;
     padding: 10px;
+    border:  #6B94A8;
     border-right: 1px solid #ccc;
-    color: #6B94A8; 
+    color: #133041; 
     font-weight: bold;
     margin: 0;
     height: 100%;
@@ -161,9 +168,9 @@ label {
     padding: 5px;
 }
 
-.test_1 + .test_3 + .test_2 {
+/* .test_1 + .test_3 + .test_2 {
     color: red;
-}
+} */
 
 .card__radio:hover {
     border: #D8DB2F solid 1px;
@@ -178,16 +185,29 @@ label {
 .card__radio input {
     display: none;
 }
+
+/* ------------------------------------------------------------------------ */
+
+/* De input is ook wel het knopje dat ingeklikt kan worden op de pagina.
+    Daarbij is er checked zodra erop wordt geklikt een handeling uitgevoerd moet worden.
+    Het plusje geeft aan met welke class het verband heeft.
+    Before wordt gebruikt om te zorgen dat de handelingen bij de class before eerst
+    uitgevoerd wordt. Dus de code die je hieronder ziet is alleen van toepassing
+    als er op de knop wordt geklikt. */
 .card__radio input:checked + .fa-regular::before {
     content: '\f192';
+    color: #D8DB2F;
 }
+
+/* ------------------------------------------------------------------------ */
+
 .card__radio .fa-regular {
     margin-right: 10px;
 }
 
 .card__radio label {
     color: #133041;
-    padding-left: 5px;
+    /* padding-left: 5px; */
 }
 
 .card__submit {
@@ -222,3 +242,4 @@ label {
 .card__results-a {
     margin-bottom: 20px;
 }
+

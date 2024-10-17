@@ -49,19 +49,25 @@
                     </div>
                 </div>
 
-                <input type="radio" id="repayment" name="mortgage-type" value="repayment">
 
                 <div class="card__type">
-                    <label>Mortgage Type
+                    <label>Mortgage Type</label>
+                    
+                    <label class="repay">
                     <div class="card__radio">
                         <input type="radio" id="repayment" name="mortgage-type" value="repayment">
                         <i class="fa-regular fa-circle"></i>
-                        Repayment
+                        <p>Repayment</p>
                     </div></label>
+
+                    <label class="interest">
+                        
                     <div class="card__radio">
                         <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
-                        <label for="interest-only">Interest Only</label>
-                    </div>
+                        <i class="fa-regular fa-circle"></i>
+                        <p>Interest Only</p>
+                    </div></label>
+                    
                 </div>
 
                 <button onclick="getNumber()" class="card__submit">Calculate Repayments</button>
