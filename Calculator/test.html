@@ -1,154 +1,41 @@
-
-<html>
 <head>
-    <title>Hypotheek Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="content-card">
-            <div class="card__left">
-                <div class="card__header">
-                    <h1 class="card__title">Mortgage Calculator</h1>
-                    <button class="card__reset-button">Clear All</button>
-                </div>
-                <div class="card__amount">
-                    <label>Mortgage Amount</label>
-                    <div>
-                        <p class="form__symbol">%</p>
-                        <input type="number" class="card__input" name="amount" >
-                    </div>
-                </div>
-                <div class="card__terms">
-                    <div class="card__term">
-                        <label>Mortgage Term</label>
-                        <div class="recht__zetten">
-                            <p>years</p>
-                            <input type="number" class="card__input" name="years">
-                        </div>
-                    </div>
-                    <div class="card__interest">
-                        <label>Interest Rate</label>
-                        <input type="number" class="card__input" name="percent" placeholder="%">
-                    </div>
-                </div>
-                <div class="card__type">
-                    <label>Mortgage Type</label>
-                    <div class="card__radio">
-                        <input type="radio" id="repayment" name="mortgage-type" value="repayment">
-                        <label for="repayment">Repayment</label>
-                    </div>
-                    <div class="card__radio">
-                        <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
-                        <label for="interest-only">Interest Only</label>
-                    </div>
-                </div>
-                <button class="card__submit">Calculate Repayments</button>
-            </div>
-            <div class="card__right">
-                <div class="card__results">
-                    <h2 class="card__results-a">Results shown here</h2>
-                    <p class="card__results-b">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
-                </div>
-            </div>
-        </div>
+    <style>
+      /* Verberg standaard radioknop */
+      .card__radio input[type="radio"] {
+        display: none;
+      }
+  
+      /* Style voor het aangepaste cirkeltje */
+      .card__radio label:before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+  
+      /* Wanneer het cirkeltje aangeklikt is */
+      .card__radio input[type="radio"]:checked + label:before {
+        background-color: green; /* Groen bij selectie */
+        border-color: green;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="card__type">
+      <label>Mortgage Type</label>
+      <div class="card__radio">
+        <input type="radio" id="repayment" name="mortgage-type" value="repayment">
+        <label for="repayment">Repayment</label>
+      </div>
+      <div class="card__radio">
+        <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
+        <label for="interest-only">Interest Only</label>
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hypotheek Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="content-card">
-            <!-- Linker kant van de kaart -->
-            <div class="card__left">
-                <div class="card__header">
-                    <h1 class="card__title">Mortgage Calculator</h1>
-                    <button class="card__reset-button">Clear All</button>
-                </div>
-
-                <div class="card__amount">
-                    <label>Mortgage Amount</label>
-                    <div>
-                        <p class="form__symbol">£</p>
-                        <input type="number" class="card__input" name="amount" placeholder="Enter amount">
-                    </div>
-                </div>
-
-                <div class="card__terms">
-                    <div class="card__term">
-                        <label>Mortgage Term</label>
-                        <div class="recht__zetten">
-                            <input type="number" class="card__input" name="years" placeholder="Term in years">
-                            <p>years</p>
-                        </div>
-                    </div>
-                    <div class="card__interest">
-                        <label>Interest Rate</label>
-                        <div class="recht__zetten">
-                            <input type="number" class="card__input" name="percent" placeholder="Interest rate">
-                            <p>%</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card__type">
-                    <label>Mortgage Type</label>
-                    <div class="card__radio">
-                        <input type="radio" id="repayment" name="mortgage-type" value="repayment">
-                        <label for="repayment">Repayment</label>
-                    </div>
-                    <div class="card__radio">
-                        <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
-                        <label for="interest-only">Interest Only</label>
-                    </div>
-                </div>
-
-                <button class="card__submit">Calculate Repayments</button>
-            </div>
-
-            <!-- Rechter kant van de kaart -->
-            <div class="card__right">
-                <div class="card__results">
-                    <h2 class="card__results-a">Results shown here</h2>
-                    <p class="card__results-b">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+  </body>
+  

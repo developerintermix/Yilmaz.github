@@ -20,6 +20,25 @@
     color: #4E6E7E;
 } */
 
+/* Font includes */
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    src: url('/assets/fonts/fa-brands-400.woff2') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    src: url('/assets/fonts/fa-regular-400.woff2') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    src: url('/assets/fonts/fa-solid-900.woff2') format('woff');
+    font-weight: 900;
+}
+
 /* Algemene container */
 .container {
     display: flex;
@@ -142,7 +161,27 @@ label {
     padding: 5px;
 }
 
+.test_1 + .test_3 + .test_2 {
+    color: red;
+}
+
+.card__radio:hover {
+    border: #D8DB2F solid 1px;
+    background-color: #fdff92;
+}
+
+/* Hieronder kan je de kleur aanpassen van de cirkel */
+/* .card__radio i {
+    color:aqua;
+} */
+
 .card__radio input {
+    display: none;
+}
+.card__radio input:checked + .fa-regular::before {
+    content: '\f192';
+}
+.card__radio .fa-regular {
     margin-right: 10px;
 }
 
@@ -183,13 +222,3 @@ label {
 .card__results-a {
     margin-bottom: 20px;
 }
-
-/* .card__results p {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.5;
-} */
-
-/* .card__result-a {
-    padding-bottom: 10px;
-} */

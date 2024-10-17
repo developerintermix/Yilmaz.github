@@ -1,42 +1,3 @@
-<!-- <html>
-<head>
-    <title>Hypotheek Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="content-card">
-        <div class="card__buttons">
-
-            <div class="card__left">
-                <div class="card__begin">
-                        <h1 class="card__title">Mortage Calculator</h1>
-                        <button class="card__reset-button"> Clear all</button>
-                </div>
-                <div class="card__amount">
-                    <p>Mortage Amount</p>
-                    <input type="number" class="card__amount-money" name="amount" placeholder="...">
-                </div>
-                    <div class="card__term">
-                        <p>Mortage Term</p>
-                        <input type="number" class="card__term-years" name="years" placeholder="...">
-                    </div>
-                    <div class="card__interest">
-                        <p>Mortage Term</p>
-                        <input type="number" class="card__interest-rates" name="percent" placeholder="...">
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-    </div>
-</body>
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -44,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hypotheek Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/stylesheets/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/brands.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/regular.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/solid.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
+
         <div class="content-card">
             
             <div class="card__left">
@@ -83,12 +49,15 @@
                     </div>
                 </div>
 
+                <input type="radio" id="repayment" name="mortgage-type" value="repayment">
+
                 <div class="card__type">
-                    <label>Mortgage Type</label>
+                    <label>Mortgage Type
                     <div class="card__radio">
                         <input type="radio" id="repayment" name="mortgage-type" value="repayment">
-                        <label for="repayment">Repayment</label>
-                    </div>
+                        <i class="fa-regular fa-circle"></i>
+                        Repayment
+                    </div></label>
                     <div class="card__radio">
                         <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
                         <label for="interest-only">Interest Only</label>
