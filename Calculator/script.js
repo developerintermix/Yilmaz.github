@@ -13,6 +13,24 @@
 //         console.log("Succeed");
 //     }
 
+window.addEventListener('DOMContentLoaded', () => {
+    addEventListenerToSubmitButton()
+    addEventListenerToResetButton()
+})
+
+function addEventListenerToSubmitButton()
+{
+    const $submitButton = document.getElementById('mortage-calculator__submit-button')
+
+    if ($submitButton === null) return
+    
+    $submitButton.addEventListener('click', () => {
+        getNumber()
+    })
+}
+function addEventListenerToResetButton()
+{
+}
 
 function getNumber() {
     let amount = parseFloat(document.getElementById("amount").value);
@@ -31,8 +49,10 @@ function getNumber() {
     let monthlyRepayment = amount * (monthlyRate * Math.pow(1 + monthlyRate, totalPayments)) / (Math.pow(1 + monthlyRate, totalPayments) - 1);
 
     let totalRepayment = monthlyRepayment * totalPayments;
-    
-    
+    console.log(totalRepayment)
+
+    showMortageCalculatorResultsPanel()
+
     // document.querySelector(".card__results-a").textContent = "Your results are shown below based on the information you provided.";
     // document.querySelector(".card__results-b").innerHTML = `
     //     <div style="background-color: #0d4b73; padding: 20px; border-radius: 10px;">
@@ -44,12 +64,47 @@ function getNumber() {
     // `;
 }
 
+function showMortageCalculatorResultsPanel()
+{
+    const $preResultsPanel = document.getElementById('mortage-calculator__pre-results-panel')
+    const $resultsPanel = document.getElementById('mortage-calculator__results-panel')
+
+    // Check if the elements exist.
+    if (
+        $preResultsPanel === null ||
+        $resultsPanel === null
+    ) {
+        return
+    }
+
+    $preResultsPanel.classList.add('mortage-calculator__right-panel--hidden')
+    $resultsPanel.classList.remove('mortage-calculator__right-panel--hidden')
+}
+
+function showMortageCalculatorPreResultsPanel()
+{
+    const $preResultsPanel = document.getElementById('mortage-calculator__pre-results-panel')
+    const $resultsPanel = document.getElementById('mortage-calculator__results-panel')
+
+    // Check if the elements exist.
+    if (
+        $preResultsPanel === null ||
+        $resultsPanel === null
+    ) {
+        return
+    }
+
+    $preResultsPanel.classList.remove('mortage-calculator__right-panel--hidden')
+    $resultsPanel.classList.add('mortage-calculator__right-panel--hidden')
+}
+
+/*
 const card_proces = document.querySelector(".card__proces");
 const card_result = document.querySelector(".card__results");
 
 
-function ToggleCard() {
+function toggleCard() {
     card_proces.classList.toggle("hidden");
     card_result.classList.toggle("hidden");
 }
-
+*/

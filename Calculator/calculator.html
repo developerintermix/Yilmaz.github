@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -21,14 +23,14 @@
             <div class="card__left">
                 <div class="card__header">
                     <h1 class="card__title">Mortgage Calculator</h1>
-                    <button class="card__reset-button">Clear All</button>
+                    <button class="card__reset-button" onclick="showMortageCalculatorPreResultsPanel()">Clear All</button>
                 </div>
 
                 <div class="card__amount">
                     <label>Mortgage Amount</label>
                     <div class="card__amount-input" id="card__amount-color">
                         <p class="form__symbol">£</p>
-                        <input type="number" class="card__input" id="amount"  name="amount" placeholder="Enter amount">
+                        <input type="number" class="card__input" id="amount" name="amount" placeholder="Enter amount">
                     </div>
                 </div>
 
@@ -70,34 +72,33 @@
                     
                 </div>
 
-                <button onclick="ToggleCard()" class="card__submit">
+                <button id="mortage-calculator__submit-button" class="card__submit">
                     <img class="icon__calculator" src="..\mortgage-repayment-calculator-main\assets\images\icon-calculator.svg" alt="error">
                     Calculate Repayments
                 </button>
             </div>
 
-            <div class="card__right">
-                <div class="card__results">
+            <div class="card__right mortage-calculator__right-content-holder">
+                <div class="card__results mortage-calculator__right-panel mortage-calculator__right-panel--pre-results" id="mortage-calculator__pre-results-panel">
                     <img class="card__pic" src="..\mortgage-repayment-calculator-main\assets\images\illustration-empty.svg" alt="">
                     <h2 class="card__results-a">Results shown here</h2>
                     <p class="card__results-b">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
                 </div>
-                <div class="card__proces proces hidden" style=background-color:#0d4b73; border-top: green; border-radius: 10px;>
+                <div class="card__proces proces mortage-calculator__right-panel mortage-calculator__right-panel--results mortage-calculator__right-panel--hidden" id="mortage-calculator__results-panel" style=background-color:#0d4b73; border-top-color: green; border-radius: 10px;>
                     <div class="proces__text">
                         <h2>Your results</h2>
                         <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
                     </div>
                     <div class="proces__biling">
                         <h2 style="margin-bottom: 10px;">Your monthly repayments</h2>
-                        <p style="color: #D8DB2F; font-weight: bold;">£${monthlyRepayment.toFixed(2)}</p>
+                        <p style="color: #D8DB2F; font-weight: bold;">£{monthlyRepayment.toFixed(2)}</p>
                         <h2 style="margin-top: 20px;">Total you'll repay over the term</h2>
-                        <p style=" color: #D8DB2F; font-weight: bold;">£${totalRepayment.toFixed(2)}</p>
+                        <p style=" color: #D8DB2F; font-weight: bold;">£{totalRepayment.toFixed(2)}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
