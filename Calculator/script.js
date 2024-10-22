@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
     addEventListenerToResetButton()
 })
 
+
 function addEventListenerToSubmitButton()
 {
     const $submitButton = document.getElementById('mortage-calculator__submit-button')
@@ -28,15 +29,30 @@ function addEventListenerToSubmitButton()
         getNumber()
     })
 }
+
+
+
 function addEventListenerToResetButton()
 {
+    const resetButton = document.querySelector(".card__reset-button");
+    
+    resetButton.addEventListener("click", () => {
+        document.getElementById("amount").value = "";
+        document.getElementById("term").value = "";
+        document.getElementById("rate").value = "";
+
+        showMortageCalculatorPreResultsPanel();
+    });
+    
 }
+
+
 
 function getNumber() {
     let amount = parseFloat(document.getElementById("amount").value);
     let term = parseInt(document.getElementById("term").value);
     let rate = parseFloat(document.getElementById("rate").value);
-
+    console.log(amount);
 
     if (amount <= 0 || isNaN(amount) || term <= 0 || isNaN(term) || rate <= 0 || isNaN(rate)) {
         alert("Voer geldige waarden in voor bedrag, termijn en rentepercentage.");
@@ -47,9 +63,14 @@ function getNumber() {
     let totalPayments = term * 12;
 
     let monthlyRepayment = amount * (monthlyRate * Math.pow(1 + monthlyRate, totalPayments)) / (Math.pow(1 + monthlyRate, totalPayments) - 1);
+    let monthlyRepayment_decimals = monthlyRepayment.toFixed(2); 
 
     let totalRepayment = monthlyRepayment * totalPayments;
-    console.log(totalRepayment)
+    let totalRepayment_decimals = totalRepayment.toFixed(2);
+    
+    // console.log(totalRepayment_decimals);
+    // console.log(monthlyRate);
+    // console.log(monthlyRepayment_decimals);
 
     showMortageCalculatorResultsPanel()
 
@@ -63,6 +84,8 @@ function getNumber() {
     //     </div>
     // `;
 }
+
+
 
 function showMortageCalculatorResultsPanel()
 {
@@ -80,6 +103,8 @@ function showMortageCalculatorResultsPanel()
     $preResultsPanel.classList.add('mortage-calculator__right-panel--hidden')
     $resultsPanel.classList.remove('mortage-calculator__right-panel--hidden')
 }
+
+
 
 function showMortageCalculatorPreResultsPanel()
 {

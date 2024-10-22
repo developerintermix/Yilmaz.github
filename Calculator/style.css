@@ -1,25 +1,3 @@
-/* body{
-    background-color: #E4F4FD;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.card__begin{
-    display: flex;
-    margin: 10px;
-}
-.content-card{
-    padding: 7.5rem 7rem;
-    border: 2px solid;
-    text-align: center;
-    background-color: white;
-}
-
-.card__left p, h1{
-    color: #4E6E7E;
-} */
-
 :root {
     --slate-900: #133041;
     --slate-700: #4E6E7E;
@@ -27,6 +5,7 @@
     --slate-300: #9ABED5;
     --slate-100: #E4F4FD;
     --lime:      #D8DB2F;
+    --light-lime: #fdff92;
     --red:       #D73328;
 }
 
@@ -55,7 +34,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e6f2f2;
+    background-color: var(--slate-100);
 }
 
 .content-card {
@@ -128,7 +107,7 @@ label:first-of-type{
 .recht__zetten {
     display: flex;
     align-items: center;
-    border: 1px solid  #6B94A8; 
+    border: 1px solid  var(--slate-500); 
     border-radius: 5px;
     overflow: hidden;
 }
@@ -136,9 +115,9 @@ label:first-of-type{
 
 .form__symbol, 
 .recht__zetten p {
-    background-color: #E4F4FD;
+    background-color: var(--slate-100);
     padding: 10px;
-    border:  #6B94A8;
+    border:  var(--slate-500);
     border-right: 1px solid #ccc;
     color: var(--slate-700);
     font-weight: bold;
@@ -147,14 +126,22 @@ label:first-of-type{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
+    width: 48px;
     text-align: center;
 }
 
-.form__symbol:first-of-type, 
-.recht__zetten p:first-of-type{
-    width: 10px
+.form__symbol {
+    width: 20px;
 }
+
+/* .interest__icon {
+    width: 20px;
+} */
+
+/* .form__symbol:first-of-type, 
+.recht__zetten p:first-of-type{
+    width: 90px
+} */
 
 
 .recht__zetten input {
@@ -176,22 +163,27 @@ label:first-of-type{
 
 .card__terms {
     display: flex;
-    gap: 20px;
+    gap: 60px;
 }
 
 .card__radio {
     display: flex;
     align-items: center;
     margin-top: 10px;
-    border: #6B94A8 solid 1px;
+    border: var(--slate-500) solid 1px;
     border-radius: 7px;
     padding: 5px;
     padding-left: 20px;
 }
 
 .card__radio:hover {
-    border: #D8DB2F solid 1px;
-    background-color: #fdff92;
+    border: var(--lime) solid 1px;
+    background-color: var(--light-lime);
+}
+
+.card__radio p {
+    margin: 8px;
+    line-height: 1.2;
 }
 
 /* Hieronder kan je de kleur aanpassen van de cirkel */
@@ -213,8 +205,17 @@ label:first-of-type{
     als er op de knop wordt geklikt. */
 .card__radio input:checked + .fa-regular::before {
     content: '\f192';
-    color: #D8DB2F;
+    color: var(--lime);
 }
+
+/* (:has) Gebruik je als je bij meerdere div's dezelfde classname hebt maar andere elementen.
+    Als je dan een aanpassing wilt maken voor een uniek element wat andere div's niet hebben
+    kan je :has gebruiken */
+label:has(input:checked) .card__radio {
+    border-color: var(--lime);
+    background-color: var(--light-lime);
+}
+
 
 
 
@@ -225,15 +226,15 @@ label:first-of-type{
 }
 
 .card__radio label {
-    color: #133041;
+    color: var(--slate-900);
     /* padding-left: 5px; */
 }
 
-.card__submit {
+/* .card__submit {
     width: 75%;
     padding: 15px;
-    background-color: #D8DB2F;
-    color: #133041;
+    background-color: var(--lime);
+    color: var(--slate-900);
     border: none;
     border-radius: 30px;
     font-size: 16px;
@@ -243,16 +244,42 @@ label:first-of-type{
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+} */
+
+.card__submit {
+    display: flex;
+    align-items: center;  /* Voor verticale uitlijning */
+    justify-content: center;  /* Voor horizontale uitlijning */
+    gap: 5px;  /* Ruimte tussen de icon en de tekst */
+    width: 75%;
+    padding: 15px;
+    background-color: var(--lime);
+    color: var(--slate-900);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
 }
+
 
 .icon__calculator{
     padding-right: 20px;
 }
 
+.icon__calculator {
+    height: 30px; /* Pas de hoogte aan naar wens */
+    width: auto;
+    vertical-align: middle;
+}
+
+
 /* Rechterzijde */
 .card__right {
     flex: 1;
-    background-color: #133041;
+    background-color: var(--slate-900);
     color: white;
     padding: 40px;
     display: flex;
@@ -272,10 +299,10 @@ label:first-of-type{
 }
 
 .card__results-b {
-    color: #9ABED5;
+    color: var(--slate-300);
 }
 .card__results-b div {
-    background-color: #0d4b73;
+    background-color: var(--slate-300);
     padding: 20px;
     border-radius: 10px;
 }
@@ -287,19 +314,54 @@ label:first-of-type{
 .card__results-b p {
     font-size: 24px;
     font-weight: bold;
-    color: #D8DB2F;
+    color: var(--lime);
 }
 
 .hidden {
     display: none;
 }
 
-.mortage-calculator__right-panel {
+/* .mortage-calculator__right-panel {
     
-}
+} */
+
 .mortage-calculator__right-panel--hidden {
     display: none;
 }
+
+
+.card__proces {
+    background-color: var(--slate-900);
+    border-top-color: var(--lime);
+    border-radius: 10px;
+}
+
+.proces__text p{
+    color: var(--slate-300);
+}
+
+.billing__monthly {
+    margin-bottom: 10px;
+}
+
+.billing__monthly-result {
+    color: var(--lime);
+    font-weight: bold;
+}
+
+.billing__total {
+    margin-top: 20px;
+}
+
+.billing__total-result {
+    color: var(--lime);
+    font-weight: bold;
+}
+
+
+
+
+/* Voorbeeld van Scss/Sass */
 
 /*
 .mortage-calculator {
