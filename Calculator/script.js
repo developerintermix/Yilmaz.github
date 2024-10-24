@@ -56,6 +56,16 @@ function getNumber() {
 
     if (amount <= 0 || isNaN(amount) || term <= 0 || isNaN(term) || rate <= 0 || isNaN(rate)) {
         alert("Voer geldige waarden in voor bedrag, termijn en rentepercentage.");
+        
+        const inputs = document.querySelectorAll(".card__input");
+
+        inputs.forEach(input => {
+            if (input.value.length === 0) {
+                console.log("Yilmaz");
+                input.classList.add("invalid");
+            }
+        });
+          
         return;
     }
 
@@ -68,21 +78,13 @@ function getNumber() {
     let totalRepayment = monthlyRepayment * totalPayments;
     let totalRepayment_decimals = totalRepayment.toFixed(2);
     
+    document.getElementById("monthlyResult").innerHTML = "£" + monthlyRepayment_decimals;
+    document.getElementById("totalResult").innerHTML = "£" + totalRepayment_decimals;
     // console.log(totalRepayment_decimals);
     // console.log(monthlyRate);
     // console.log(monthlyRepayment_decimals);
 
     showMortageCalculatorResultsPanel()
-
-    // document.querySelector(".card__results-a").textContent = "Your results are shown below based on the information you provided.";
-    // document.querySelector(".card__results-b").innerHTML = `
-    //     <div style="background-color: #0d4b73; padding: 20px; border-radius: 10px;">
-    //         <h2 style="margin-bottom: 10px;">Your monthly repayments</h2>
-    //         <p style="font-size: 28px; color: #D8DB2F; font-weight: bold;">£${monthlyRepayment.toFixed(2)}</p>
-    //         <h2 style="margin-top: 20px;">Total you'll repay over the term</h2>
-    //         <p style="font-size: 24px; color: #D8DB2F; font-weight: bold;">£${totalRepayment.toFixed(2)}</p>
-    //     </div>
-    // `;
 }
 
 
@@ -122,14 +124,3 @@ function showMortageCalculatorPreResultsPanel()
     $preResultsPanel.classList.remove('mortage-calculator__right-panel--hidden')
     $resultsPanel.classList.add('mortage-calculator__right-panel--hidden')
 }
-
-/*
-const card_proces = document.querySelector(".card__proces");
-const card_result = document.querySelector(".card__results");
-
-
-function toggleCard() {
-    card_proces.classList.toggle("hidden");
-    card_result.classList.toggle("hidden");
-}
-*/
