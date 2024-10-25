@@ -9,7 +9,6 @@
     --red:       #D73328;
 }
 
-/* Font includes */
 @font-face {
     font-family: 'Font Awesome 6 Brands';
     src: url('/assets/fonts/fa-brands-400.woff2') format('woff');
@@ -28,7 +27,6 @@
     font-weight: 900;
 }
 
-/* Algemene container */
 .container {
     display: flex;
     justify-content: center;
@@ -47,7 +45,6 @@
     background-color: white;
 }
 
-/* Linkerzijde - Calculator form */
 .card__left {
     flex: 1;
     padding: 40px;
@@ -133,16 +130,6 @@ label:first-of-type{
 .form__symbol {
     width: 20px;
 }
-
-/* .interest__icon {
-    width: 20px;
-} */
-
-/* .form__symbol:first-of-type, 
-.recht__zetten p:first-of-type{
-    width: 90px
-} */
-
 
 .recht__zetten input {
     border: none; 
@@ -230,22 +217,6 @@ label:has(input:checked) .card__radio {
     /* padding-left: 5px; */
 }
 
-/* .card__submit {
-    width: 75%;
-    padding: 15px;
-    background-color: var(--lime);
-    color: var(--slate-900);
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-} */
-
 .card__submit {
     display: flex;
     align-items: center;  /* Voor verticale uitlijning */
@@ -321,19 +292,15 @@ label:has(input:checked) .card__radio {
     display: none;
 }
 
-/* .mortage-calculator__right-panel {
-    
-} */
-
 .mortage-calculator__right-panel--hidden {
     display: none;
 }
 
 
 .card__proces {
-    background-color: var(--slate-900);
-    border-top-color: var(--lime);
+    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    border-top: 3px solid var(--lime);
 }
 
 .proces__text p{
@@ -363,13 +330,69 @@ label:has(input:checked) .card__radio {
     font-weight: bold;
 }
 
-.invalid {
+inpit::before
+
+/* Het kleuren van de border wordt gedaan met de "recht__zetten" class. */
+/* Dit is ook de reden dat het kleuren niet werkt ook als de invalid class toegevoegd */
+.invalid{
     border-color: var(--red);
 }
 
+
+/* Deze werkt wel! */
 .invalid + p {
     background-color: var(--red);
     color: white;
 }
 
+.card__amount-input.invalid .form__symbol {
+    background-color: var(--red);
+    color: white;
+}
 
+/* ----------------------------------------------- */
+
+/* Algemeen voor het symbool voor alle velden */
+.card__amount-input::before,
+.recht__zetten::after {
+    content: ""; /* Plaats hier specifieke inhoud per veld */
+    color: var(--slate-700);
+    background-color: var(--slate-100);
+    padding: 10px;
+    font-weight: bold;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Specifiek voor ieder veld */
+.card__amount-input::before {
+    content: "£";
+    width: 48px; /* Pas breedte aan voor symbool */
+}
+.recht__zetten::after {
+    width: 48px;
+}
+
+.recht__zetten:nth-of-type(1)::after {
+    content: "years";
+}
+
+.recht__zetten:nth-of-type(2)::after {
+    content: "%";
+}
+
+/* De `invalid` status met aangepaste kleuren */
+.card__amount-input.invalid::before,
+.recht__zetten.invalid::after {
+    background-color: var(--red);
+    color: white;
+}
+
+.card__amount-input.invalid,
+.recht__zetten.invalid {
+    border-color: var(--red);
+}

@@ -1,41 +1,14 @@
+<html>
 <head>
-    <style>
-      /* Verberg standaard radioknop */
-      .card__radio input[type="radio"] {
-        display: none;
-      }
-  
-      /* Style voor het aangepaste cirkeltje */
-      .card__radio label:before {
-        content: "";
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        border: 2px solid #ccc;
-        border-radius: 50%;
-        margin-right: 10px;
-        vertical-align: middle;
-      }
-  
-      /* Wanneer het cirkeltje aangeklikt is */
-      .card__radio input[type="radio"]:checked + label:before {
-        background-color: green; /* Groen bij selectie */
-        border-color: green;
-      }
-    </style>
-  </head>
-  
-  <body>
-    <div class="card__type">
-      <label>Mortgage Type</label>
-      <div class="card__radio">
-        <input type="radio" id="repayment" name="mortgage-type" value="repayment">
-        <label for="repayment">Repayment</label>
-      </div>
-      <div class="card__radio">
-        <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
-        <label for="interest-only">Interest Only</label>
-      </div>
-    </div>
-  </body>
-  
+ <title>Testpagina</title>
+ <link rel="stylesheet" href="test-style.css">
+</head>
+
+<body>
+  <div class="amount-wrapper">
+  <input type="number" id="amount" class="amount" name="amount" placeholder="Enter amount">
+  </div>
+</body>
+
+
+</html>

@@ -1,0 +1,21 @@
+.amount-wrapper {
+    position: relative; /* Nodig voor positionering van het pseudo-element */
+}
+
+.amount-wrapper::before {
+    content: "£";
+    position: absolute;
+    color: blue;
+    background-color: var(--slate-300);
+    left: 10px; /* De afstand van de linkerkant van de wrapper */
+    top: 50%;
+    transform: translateY(-50%); /* Centraal verticaal */
+    padding: 0 5px; /* Wat padding voor het symbool */
+    font-size: 16px;
+}
+
+.amount {
+    padding-left: 30px; /* Maak ruimte voor het pond-symbool */
+    width: 100%;
+    box-sizing: border-box; /* Zorg dat padding en border worden meegerekend */
+}

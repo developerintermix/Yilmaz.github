@@ -21,7 +21,6 @@ function addEventListenerToResetButton() {
         document.getElementById("term").value = "";
         document.getElementById("rate").value = "";
 
-        // Reset any invalid classes when reset button is clicked
         const inputs = document.querySelectorAll(".card__input");
         inputs.forEach(input => {
             input.classList.remove("invalid");
@@ -36,7 +35,6 @@ function getNumber() {
     let term = parseInt(document.getElementById("term").value);
     let rate = parseFloat(document.getElementById("rate").value);
 
-    // If any field is invalid, mark them with the 'invalid' class and return
     if (
         amount <= 0 || 
         isNaN(amount) ||
@@ -50,10 +48,9 @@ function getNumber() {
         return;
     }
 
-    // If all fields are valid, remove the 'invalid' class
     const inputs = document.querySelectorAll(".card__input");
     inputs.forEach(input => {
-        input.classList.remove("invalid");
+       // input.classList.remove("invalid");
     });
 
     let monthlyRate = (rate / 100) / 12;
@@ -71,13 +68,24 @@ function getNumber() {
     showMortageCalculatorResultsPanel();
 }
 
+// function checkIfFieldIsFilled(input) {
+//     if (input.value.length === 0 || input.value <= 0) {
+//         input.classList.add("invalid");
+//     } else {
+//         input.classList.remove("invalid");
+//     }
+// }
+
 function checkIfFieldIsFilled(input) {
+    const container = input.parentElement;
+    
     if (input.value.length === 0 || input.value <= 0) {
-        input.classList.add("invalid");
+        container.classList.add("invalid");
     } else {
-        input.classList.remove("invalid");
+        container.classList.remove("invalid");
     }
 }
+
 
 function showMortageCalculatorResultsPanel() {
     const $preResultsPanel = document.getElementById('mortage-calculator__pre-results-panel');

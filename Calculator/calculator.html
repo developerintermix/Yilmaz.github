@@ -25,11 +25,10 @@
                     <h1 class="card__title">Mortgage Calculator</h1>
                     <button class="card__reset-button" onclick="showMortageCalculatorPreResultsPanel()">Clear All</button>
                 </div>
-
                 <div class="card__amount">
                     <label>Mortgage Amount</label>
                     <div class="card__amount-input" id="card__amount-color">
-                        <p class="form__symbol">£</p>
+                        <!-- <p class="form__symbol">£</p> -->
                         <input type="number" class="card__input" id="amount" name="amount" placeholder="Enter amount">
                     </div>
                 </div>
@@ -39,14 +38,14 @@
                         <label>Mortgage Term</label>
                         <div class="recht__zetten">
                             <input type="number" class="card__input" id="term" name="years" placeholder="Term in years">
-                            <p class="terms__icon">years</p>
+                            <!-- <p class="terms__icon">years</p> -->
                         </div>
                     </div>
                     <div class="card__interest">
                         <label>Interest Rate</label>
                         <div class="recht__zetten">
                             <input type="number" class="card__input" id="rate" name="percent" placeholder="Interest rate">
-                            <p class="interest__icon">%</p>
+                            <!-- <p class="interest__icon">%</p> -->
                         </div>
                     </div>
                 </div>
@@ -78,6 +77,8 @@
                 </button>
             </div>
 
+
+            <!-- Eerste div zorgt voor de rechterkant. -->
             <div class="card__right mortage-calculator__right-content-holder">
                 <div class="card__results mortage-calculator__right-panel mortage-calculator__right-panel--pre-results" id="mortage-calculator__pre-results-panel">
                     <img class="card__pic" src="..\mortgage-repayment-calculator-main\assets\images\illustration-empty.svg" alt="">
@@ -85,19 +86,19 @@
                     <p class="card__results-b">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
                 </div>
                 <div class="card__proces proces mortage-calculator__right-panel mortage-calculator__right-panel--results mortage-calculator__right-panel--hidden" id="mortage-calculator__results-panel">
-                    <div class="proces__text">
+                    <!-- <div class="proces__text">
                         <h2 class="proces__text-title">Your results</h2>
                         <p class="proces__text-description">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
-                    </div>
+                    </div> -->
                     <div class="proces__biling">
                         <h2 class="billing__monthly">Your monthly repayments</h2>
                         <h3 class="billing__monthly-result" id="monthlyResult">£{monthlyRepayment.toFixed(2)}</h1>
                         <h2 class="billing__total">Total you'll repay over the term</h2>
                         <h3 class="billing__total-result" id="totalResult">£{totalRepayment.toFixed(2)}</h1>
-                        <!-- Resultaten  -->
+                    
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
 
