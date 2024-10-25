@@ -270,7 +270,7 @@ label:has(input:checked) .card__radio {
 }
 
 .icon__calculator {
-    height: 30px; /* Pas de hoogte aan naar wens */
+    height: 22px;
     width: auto;
     vertical-align: middle;
 }
@@ -338,6 +338,11 @@ label:has(input:checked) .card__radio {
 
 .proces__text p{
     color: var(--slate-300);
+    text-align: left;
+}
+
+.proces__text-description {
+    text-align: left;
 }
 
 .billing__monthly {
@@ -358,34 +363,13 @@ label:has(input:checked) .card__radio {
     font-weight: bold;
 }
 
-
-
-
-/* Voorbeeld van Scss/Sass */
-
-/*
-.mortage-calculator {
-
-    &__right-content-holder {
-
-    }
-
-    &__right-panel {
-
-        &--hidden {
-
-        }
-
-    }
-
+.invalid {
+    border-color: var(--red);
 }
 
-.card__results-b {
-
-    h2, p {
-        color: white;
-        margin: 10px 0;
-    }
-
+.invalid + p {
+    background-color: var(--red);
+    color: white;
 }
-*/
+
+
