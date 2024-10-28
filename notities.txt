@@ -1,0 +1,19 @@
+Functie knop
+v Notificatie
+- Welke inputs zijn leeg?
+- Class toevoegen op inputs als deze leeg zijn (invalid)
+
+
+
+        const field = document.querySelectorAll(".card__input");
+        
+        field.forEach(input => {
+            if (this.value.length === 0) {
+                console.log("Yilmaz");
+                field.classList.add("invalid");
+            }
+        });
+
+
+Alle if-statements staat in een enkele if. Elke if-statement moet los staan. Dan kan de classname "invalid" per lege input, toegevoegd worden.
+Later als alle inputs wel ingevuld zijn, kan dit weer per input gecontrolleerd worden. 

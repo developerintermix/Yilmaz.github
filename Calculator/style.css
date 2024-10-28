@@ -165,7 +165,7 @@ label:first-of-type{
 
 .card__radio:hover {
     border: var(--lime) solid 1px;
-    background-color: var(--light-lime);
+    /* background-color: var(--light-lime); */
 }
 
 .card__radio p {
@@ -235,15 +235,15 @@ label:has(input:checked) .card__radio {
     font-weight: 700;
 }
 
-
-.icon__calculator{
-    padding-right: 20px;
+.card__submit:hover {
+    background-color: var(--light-lime);
 }
 
 .icon__calculator {
     height: 22px;
     width: auto;
     vertical-align: middle;
+    padding-right: 20px;
 }
 
 
@@ -314,6 +314,7 @@ label:has(input:checked) .card__radio {
 
 .billing__monthly {
     margin-bottom: 10px;
+    color: var(--slate-300);
 }
 
 .billing__monthly-result {
@@ -323,14 +324,15 @@ label:has(input:checked) .card__radio {
 
 .billing__total {
     margin-top: 20px;
+    color: var(--slate-300);
 }
 
 .billing__total-result {
-    color: var(--lime);
+    color: white;
     font-weight: bold;
 }
 
-inpit::before
+
 
 /* Het kleuren van de border wordt gedaan met de "recht__zetten" class. */
 /* Dit is ook de reden dat het kleuren niet werkt ook als de invalid class toegevoegd */
@@ -368,10 +370,9 @@ inpit::before
     text-align: center;
 }
 
-/* Specifiek voor ieder veld */
 .card__amount-input::before {
     content: "£";
-    width: 48px; /* Pas breedte aan voor symbool */
+    width: 48px;
 }
 .recht__zetten::after {
     width: 48px;
@@ -381,11 +382,10 @@ inpit::before
     content: "years";
 }
 
-.recht__zetten:nth-of-type(2)::after {
+.recht__zetten::after {
     content: "%";
 }
 
-/* De `invalid` status met aangepaste kleuren */
 .card__amount-input.invalid::before,
 .recht__zetten.invalid::after {
     background-color: var(--red);
