@@ -29,6 +29,7 @@
                     <label>Mortgage Amount</label>
                     <div class="card__amount-input" id="card__amount-color">
                         <!-- <p class="form__symbol">£</p> -->
+                        <span class="input-field__icon input-field__icon--terms">£</span>
                         <input type="number" class="card__input" id="amount" name="amount" placeholder="Enter amount">
                     </div>
                 </div>
@@ -39,6 +40,7 @@
                         <div class="recht__zetten">
                             <input type="number" class="card__input" id="term" name="years" placeholder="Term in years">
                             <!-- <p class="terms__icon">years</p> -->
+                             <span class="input-field__icon input-field__icon--terms">years</span>
                         </div>
                     </div>
                     <div class="card__interest">
@@ -46,6 +48,7 @@
                         <div class="recht__zetten">
                             <input type="number" class="card__input" id="rate" name="percent" placeholder="Interest rate">
                             <!-- <p class="interest__icon">%</p> -->
+                             <span class="input-field__icon input-field__icon--interest">%</span>
                         </div>
                     </div>
                 </div>
@@ -58,7 +61,7 @@
                     <div class="card__radio">
                         <input type="radio" id="repayment" name="mortgage-type" value="repayment">
                         <i class="fa-regular fa-circle"></i>
-                        <p>Repayment</p>
+                        <p><strong>Repayment</strong></p>
                     </div></label>
 
                     <label class="interest">
@@ -66,7 +69,7 @@
                     <div class="card__radio">
                         <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
                         <i class="fa-regular fa-circle"></i>
-                        <p>Interest Only</p>
+                        <p><strong>Interest Only</strong></p>
                     </div></label>
                     
                 </div>
@@ -78,24 +81,25 @@
             </div>
 
 
-            <!-- Eerste div zorgt voor de rechterkant. -->
             <div class="card__right mortage-calculator__right-content-holder">
                 <div class="card__results mortage-calculator__right-panel mortage-calculator__right-panel--pre-results" id="mortage-calculator__pre-results-panel">
                     <img class="card__pic" src="..\mortgage-repayment-calculator-main\assets\images\illustration-empty.svg" alt="">
                     <h2 class="card__results-a">Results shown here</h2>
                     <p class="card__results-b">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
                 </div>
+                
                 <div class="card__proces proces mortage-calculator__right-panel mortage-calculator__right-panel--results mortage-calculator__right-panel--hidden" id="mortage-calculator__results-panel">
-                    <!-- <div class="proces__text">
+                    <div class="proces__text">
                         <h2 class="proces__text-title">Your results</h2>
                         <p class="proces__text-description">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
-                    </div> -->
-                    <div class="proces__biling">
-                        <h2 class="billing__monthly">Your monthly repayments</h2>
-                        <h3 class="billing__monthly-result" id="monthlyResult">£{monthlyRepayment.toFixed(2)}</h1>
-                        <h2 class="billing__total">Total you'll repay over the term</h2>
-                        <h3 class="billing__total-result" id="totalResult">£{totalRepayment.toFixed(2)}</h1>
-                    
+                    </div>
+
+                    <div class="proces__billing">
+                        <h4 class="billing__monthly">Your monthly repayments</h2>
+                        <h1 class="billing__monthly-result" id="monthlyResult">£{monthlyRepayment.toFixed(2)}</h1>
+                        <hr class="line">
+                        <h4 class="billing__total">Total you'll repay over the term</h2>
+                        <h2 class="billing__total-result" id="totalResult">£{totalRepayment.toFixed(2)}</h1>
                     </div>
                 </div>
             </div> 

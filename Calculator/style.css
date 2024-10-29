@@ -5,7 +5,7 @@
     --slate-300: #9ABED5;
     --slate-100: #E4F4FD;
     --lime:      #D8DB2F;
-    --light-lime: #fdff92;
+    --light-lime: #fdff9240;
     --red:       #D73328;
 }
 
@@ -83,6 +83,33 @@
     margin-top: 20px;
 }
 
+.card__amount div,
+.recht__zetten {
+    display: flex;
+    align-items: center;
+    border: 1px solid  var(--slate-500); 
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.recht__zetten {
+    width: 200px;
+}
+
+.invalid{
+    border-color: var(--red);
+}
+
+.card__amount-input.invalid .form__symbol {
+    background-color: var(--red);
+    color: white;
+}
+
+.card__amount-input.invalid
+{
+    border-color: var(--red);
+}
+
 label {
     display: block;
     font-weight: 500;
@@ -100,14 +127,7 @@ label:first-of-type{
     color: var(--slate-900);
 }
 
-.card__amount div,
-.recht__zetten {
-    display: flex;
-    align-items: center;
-    border: 1px solid  var(--slate-500); 
-    border-radius: 5px;
-    overflow: hidden;
-}
+
 
 
 .form__symbol, 
@@ -127,15 +147,45 @@ label:first-of-type{
     text-align: center;
 }
 
-.form__symbol {
-    width: 20px;
-}
-
 .recht__zetten input {
     border: none; 
     padding: 10px;
     flex: 1;
     width: 90px;
+}
+
+
+/*
+.recht__zetten::after {
+    content: "years";
+    width: 48px;
+}
+
+.recht__zetten:nth-of-type(2)::after {
+    content: "%";
+}
+    */
+
+.input-field__icon {
+    color: var(--slate-700);
+    background-color: var(--slate-100);
+    padding: 10px;
+    font-weight: bold;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.invalid .input-field__icon {
+    color: white;
+    background-color: var(--red);
+}
+
+.form__symbol {
+    width: 20px;
 }
 
 .card__input {
@@ -150,7 +200,7 @@ label:first-of-type{
 
 .card__terms {
     display: flex;
-    gap: 60px;
+    gap: 30px;
 }
 
 .card__radio {
@@ -165,12 +215,12 @@ label:first-of-type{
 
 .card__radio:hover {
     border: var(--lime) solid 1px;
-    /* background-color: var(--light-lime); */
 }
 
 .card__radio p {
     margin: 8px;
     line-height: 1.2;
+    color: var(--slate-900);
 }
 
 /* Hieronder kan je de kleur aanpassen van de cirkel */
@@ -181,8 +231,6 @@ label:first-of-type{
 .card__radio input {
     display: none;
 }
-
-/* ------------------------------------------------------------------------ */
 
 /* De input is ook wel het knopje dat ingeklikt kan worden op de pagina.
     Daarbij is er checked zodra erop wordt geklikt een handeling uitgevoerd moet worden.
@@ -203,27 +251,19 @@ label:has(input:checked) .card__radio {
     background-color: var(--light-lime);
 }
 
-
-
-
-/* ------------------------------------------------------------------------ */
-
 .card__radio .fa-regular {
     margin-right: 10px;
 }
 
 .card__radio label {
     color: var(--slate-900);
-    /* padding-left: 5px; */
 }
 
 .card__submit {
     display: flex;
-    align-items: center;  /* Voor verticale uitlijning */
-    justify-content: center;  /* Voor horizontale uitlijning */
-    gap: 5px;  /* Ruimte tussen de icon en de tekst */
-    width: 75%;
-    padding: 15px;
+    align-items: center;
+    width: 66%;
+    padding: 14px;
     background-color: var(--lime);
     color: var(--slate-900);
     border: none;
@@ -243,11 +283,18 @@ label:has(input:checked) .card__radio {
     height: 22px;
     width: auto;
     vertical-align: middle;
-    padding-right: 20px;
+    padding-right: 15px;
+    padding-left: 19px;
 }
 
 
-/* Rechterzijde */
+/* Rechterzijde ------------------------------------------------------- */ 
+
+
+.mortage-calculator__right-content-holder {
+    padding-top: 100px
+}
+
 .card__right {
     flex: 1;
     background-color: var(--slate-900);
@@ -296,11 +343,28 @@ label:has(input:checked) .card__radio {
     display: none;
 }
 
-
-.card__proces {
+.proces__billing {
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     border-top: 3px solid var(--lime);
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 40px;
+}
+
+.line {
+    border: none;
+    border-top: 1px solid var(--slate-300);
+    width: 320px;
+}
+
+.proces__billing {
+    text-align: left;
+    margin-bottom: 45px;
+}
+
+.proces__text {
+    text-align: left;
 }
 
 .proces__text p{
@@ -320,79 +384,15 @@ label:has(input:checked) .card__radio {
 .billing__monthly-result {
     color: var(--lime);
     font-weight: bold;
+    /* font-size: 50px; */
 }
 
 .billing__total {
-    margin-top: 20px;
+    margin-top: 30px;
     color: var(--slate-300);
 }
 
 .billing__total-result {
     color: white;
     font-weight: bold;
-}
-
-
-
-/* Het kleuren van de border wordt gedaan met de "recht__zetten" class. */
-/* Dit is ook de reden dat het kleuren niet werkt ook als de invalid class toegevoegd */
-.invalid{
-    border-color: var(--red);
-}
-
-
-/* Deze werkt wel! */
-.invalid + p {
-    background-color: var(--red);
-    color: white;
-}
-
-.card__amount-input.invalid .form__symbol {
-    background-color: var(--red);
-    color: white;
-}
-
-/* ----------------------------------------------- */
-
-/* Algemeen voor het symbool voor alle velden */
-.card__amount-input::before,
-.recht__zetten::after {
-    content: ""; /* Plaats hier specifieke inhoud per veld */
-    color: var(--slate-700);
-    background-color: var(--slate-100);
-    padding: 10px;
-    font-weight: bold;
-    margin: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.card__amount-input::before {
-    content: "£";
-    width: 48px;
-}
-.recht__zetten::after {
-    width: 48px;
-}
-
-.recht__zetten:nth-of-type(1)::after {
-    content: "years";
-}
-
-.recht__zetten::after {
-    content: "%";
-}
-
-.card__amount-input.invalid::before,
-.recht__zetten.invalid::after {
-    background-color: var(--red);
-    color: white;
-}
-
-.card__amount-input.invalid,
-.recht__zetten.invalid {
-    border-color: var(--red);
 }
