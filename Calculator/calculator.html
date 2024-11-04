@@ -18,6 +18,38 @@
 <body>
     <div class="container">
 
+        <div class="mortage-calculator" hidden>
+
+            <div class="mortage-calculator__left-panel">
+            
+                <header class="mortage-calculator__header">
+                    <h1 class="mortage-calculator__title">Mortage calculator</h1>
+                    <a href="" class="mortage-calculator__reset-link">Clear All</a>
+                </header>
+
+                <main class="mortage-calculator__form">
+                    <label class="form-field">
+                        <span class="form-field__label-text">Mortage Amount</span>
+                        <input type="text" name="mortage_amount" class="form-field__input">
+                    </label>
+                    <label class="form-field form-field--half">
+                        <span class="form-field__label-text">Mortage Amount</span>
+                        <input type="text" name="mortage_amount" class="form-field__input">
+                    </label>
+                    <label class="form-field form-field--half">
+                        <span class="form-field__label-text">Mortage Amount</span>
+                        <input type="text" name="mortage_amount" class="form-field__input">
+                    </label>
+                </main>
+
+            </div>
+            <div class="mortage-calculator__right-panel">
+                <div class="mortage-calculator__right-panel-pre-results"></div>
+                <div class="mortage-calculator__right-panel-results"></div>
+            </div>
+
+        </div>
+
         <div class="content-card">
             
             <div class="card__left">
@@ -37,7 +69,7 @@
                 <div class="card__terms">
                     <div class="card__term">
                         <label>Mortgage Term</label>
-                        <div class="recht__zetten">
+                        <div class="card__term-rate">
                             <input type="number" class="card__input" id="term" name="years" placeholder="Term in years">
                             <!-- <p class="terms__icon">years</p> -->
                              <span class="input-field__icon input-field__icon--terms">years</span>
@@ -45,7 +77,7 @@
                     </div>
                     <div class="card__interest">
                         <label>Interest Rate</label>
-                        <div class="recht__zetten">
+                        <div class="card__term-rate">
                             <input type="number" class="card__input" id="rate" name="percent" placeholder="Interest rate">
                             <!-- <p class="interest__icon">%</p> -->
                              <span class="input-field__icon input-field__icon--interest">%</span>

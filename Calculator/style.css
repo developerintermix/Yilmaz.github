@@ -5,7 +5,7 @@
     --slate-300: #9ABED5;
     --slate-100: #E4F4FD;
     --lime:      #D8DB2F;
-    --light-lime: #fdff9240;
+    --light-lime: #fdff9250;
     --red:       #D73328;
 }
 
@@ -73,18 +73,22 @@
     border: none;
     color: var(--slate-700);
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: underline;
+}
+
+.card__reset-button:hover {
+    color: var(--slate-900);
 }
 
 .card__amount,
 .card__terms,
 .card__type {
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .card__amount div,
-.recht__zetten {
+.card__term-rate {
     display: flex;
     align-items: center;
     border: 1px solid  var(--slate-500); 
@@ -92,7 +96,11 @@
     overflow: hidden;
 }
 
-.recht__zetten {
+.card__amount:hover {
+    border-color: var(--light-lime);
+}
+
+.card__term-rate {
     width: 200px;
 }
 
@@ -113,7 +121,7 @@
 label {
     display: block;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: var(--slate-700);
 }
 
@@ -128,7 +136,7 @@ label:first-of-type{
 }
 
 .form__symbol, 
-.recht__zetten p {
+.card__term-rate p {
     background-color: var(--slate-100);
     padding: 10px;
     border:  var(--slate-500);
@@ -144,7 +152,7 @@ label:first-of-type{
     text-align: center;
 }
 
-.recht__zetten input {
+.card__term-rate input {
     border: none; 
     padding: 10px;
     flex: 1;
@@ -154,7 +162,9 @@ label:first-of-type{
 .input-field__icon {
     color: var(--slate-700);
     background-color: var(--slate-100);
-    padding: 10px;
+    padding: 12px;
+    padding-left: 14px;
+    padding-right: 13px;
     font-weight: bold;
     margin: 0;
     height: 100%;
@@ -177,6 +187,10 @@ label:first-of-type{
     width: 100%;
     padding: 10px;
     border: none; 
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--slate-900);
+    font-weight: bold;
 }
 
 .card__input:focus {
@@ -185,7 +199,7 @@ label:first-of-type{
 
 .card__terms {
     display: flex;
-    gap: 30px;
+    gap: 24px;
 }
 
 .card__radio {
@@ -216,7 +230,6 @@ label:first-of-type{
 .card__radio input {
     display: none;
 }
-
 
 .card__radio input:checked + .fa-regular::before {
     content: '\f192';
@@ -287,7 +300,7 @@ label:has(input:checked) .card__radio {
 }
 
 .card__results-a {
-    margin-bottom: 20px;
+    margin: 16px;
 }
 
 .card__results-b {
@@ -320,10 +333,11 @@ label:has(input:checked) .card__radio {
 .proces__billing {
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 7px;
-    border-top: 3px solid var(--lime);
+    border-top: 5px solid var(--lime);
+    opacity: 2;
     padding-right: 50px;
     padding-left: 50px;
-    padding-bottom: 28px;
+    padding-bottom: 40px;
     text-align: left;
     margin-bottom: 60px;
 }
@@ -353,7 +367,8 @@ label:has(input:checked) .card__radio {
 }
 
 .billing__monthly {
-    margin-bottom: 10px;
+    margin-top: 32px;
+    margin-bottom: 8px;
     color: var(--slate-300);
 }
 
@@ -362,11 +377,11 @@ label:has(input:checked) .card__radio {
     font-weight: bold;
     font-size: 56px;
     margin-bottom: 32px;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 .billing__total {
-    margin-top: 30px;
+    margin-top: 32px;
     margin-bottom: 8px;
     color: var(--slate-300);
 }
