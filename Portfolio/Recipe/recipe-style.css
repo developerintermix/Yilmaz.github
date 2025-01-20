@@ -1,0 +1,122 @@
+/* body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+h2 {
+    color: #7A284E;
+  text-align: center 20%;
+}
+
+body {
+    text-align: center;
+    width: 375px;
+    height: 1872px;
+}
+
+.card {
+  background-color: white;
+  padding: 4%;
+  border-radius: 30px;
+  
+}
+
+.card__content{
+    font-weight: #5F564D;
+}
+
+.eerste{
+    height: 216px;
+    width: 311px;
+}
+
+.tweede{
+    padding-top: 32px;
+    height: 196px;
+    width: 311px;
+}
+
+.derde{
+    padding-top: 32px;
+    height: 228px;
+    width: 311px;
+}
+
+.vierde{
+    padding-top: 64px;
+    height: 668px;
+    width: 311px;
+}
+
+.vijfde{
+    padding-top: 64px;
+    height: 292px;
+    width: 311px;
+}
+
+.card__list-a{
+    background-color: #FFF7FB;
+    border-radius: 20px;
+    padding-bottom: 29px;
+    padding-top: 29px;
+    padding-left: 100px;
+    color: black;
+}
+.card__list-b{
+    padding-left: 100px;
+}
+
+.card__list-b li{
+    padding-bottom: 10px;
+    /* padding-left: 50px; */
+}
+
+.card__list-c{
+    margin-right: 15%;
+}
+
+.card__list-c li{
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+
+.card__list-d li{
+    border-bottom: 1px solid rgb(178, 169, 169);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+ul.card__list-d {
+    list-style-type: none ;
+    padding: 0;
+    margin: 0;
+    padding-left: 50px;
+}
+
+.card__list-d li:last-of-type {
+    border-bottom: none;
+}
+
+.card__number{
+    padding: 0%;
+}
+.card__number li {
+    padding-bottom: 10px;
+}
+
+ol { counter-reset: item; }
+ol li { display: block; }
+ol li:before {
+content: counter(item) ". ";
+counter-increment: item;
+color: #7A284E;
+padding-right: 11px; }
+
+.card__img{
+    height: 171px;
+    width: 375px;
+    border-radius: 20px;
+}
+strong{
+    color: rgb(0, 0, 0);
+}

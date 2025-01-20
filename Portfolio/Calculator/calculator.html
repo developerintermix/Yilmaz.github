@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypotheek Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/stylesheets/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/brands.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/regular.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/solid.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="mortage-calculator" hidden>
+
+            <div class="mortage-calculator__left-panel">
+            
+                <header class="mortage-calculator__header">
+                    <h1 class="mortage-calculator__title">Mortage calculator</h1>
+                    <a href="" class="mortage-calculator__reset-link">Clear All</a>
+                </header>
+
+                <main class="mortage-calculator__form">
+                    <label class="form-field">
+                        <span class="form-field__label-text">Mortage Amount</span>
+                        <input type="text" name="mortage_amount" class="form-field__input">
+                    </label>
+                    <label class="form-field form-field--half">
+                        <span class="form-field__label-text">Mortage Amount</span>
+                        <input type="text" name="mortage_amount" class="form-field__input">
+                    </label>
+                    <label class="form-field form-field--half">
+                        <span class="form-field__label-text">Mortage Amount</span>
+                        <input type="text" name="mortage_amount" class="form-field__input">
+                    </label>
+                </main>
+
+            </div>
+            <div class="mortage-calculator__right-panel">
+                <div class="mortage-calculator__right-panel-pre-results"></div>
+                <div class="mortage-calculator__right-panel-results"></div>
+            </div>
+
+        </div>
+
+        <div class="content-card">
+            
+            <div class="card__left">
+                <div class="card__header">
+                    <h1 class="card__title">Mortgage Calculator</h1>
+                    <button class="card__reset-button" onclick="showMortageCalculatorPreResultsPanel()">Clear All</button>
+                </div>
+                <div class="card__amount">
+                    <label>Mortgage Amount</label>
+                    <div class="card__amount-input" id="card__amount-color">
+                        <!-- <p class="form__symbol">£</p> -->
+                        <span class="input-field__icon input-field__icon--terms">£</span>
+                        <input type="number" class="card__input" id="amount" name="amount" placeholder="Enter amount">
+                    </div>
+                </div>
+
+                <div class="card__terms">
+                    <div class="card__term">
+                        <label>Mortgage Term</label>
+                        <div class="card__term-rate">
+                            <input type="number" class="card__input" id="term" name="years" placeholder="Term in years">
+                            <!-- <p class="terms__icon">years</p> -->
+                             <span class="input-field__icon input-field__icon--terms">years</span>
+                        </div>
+                    </div>
+                    <div class="card__interest">
+                        <label>Interest Rate</label>
+                        <div class="card__term-rate">
+                            <input type="number" class="card__input" id="rate" name="percent" placeholder="Interest rate">
+                            <!-- <p class="interest__icon">%</p> -->
+                             <span class="input-field__icon input-field__icon--interest">%</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card__type">
+                    <label>Mortgage Type</label>
+                    
+                    <label class="repay">
+                    <div class="card__radio">
+                        <input type="radio" id="repayment" name="mortgage-type" value="repayment">
+                        <i class="fa-regular fa-circle"></i>
+                        <p><strong>Repayment</strong></p>
+                    </div></label>
+
+                    <label class="interest">
+                        
+                    <div class="card__radio">
+                        <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
+                        <i class="fa-regular fa-circle"></i>
+                        <p><strong>Interest Only</strong></p>
+                    </div></label>
+                    
+                </div>
+
+                <button id="mortage-calculator__submit-button" class="card__submit">
+                    <img class="icon__calculator" src="..\mortgage-repayment-calculator-main\assets\images\icon-calculator.svg" alt="error">
+                    Calculate Repayments
+                </button>
+            </div>
+
+
+            <div class="card__right mortage-calculator__right-content-holder">
+                <div class="card__results mortage-calculator__right-panel mortage-calculator__right-panel--pre-results" id="mortage-calculator__pre-results-panel">
+                    <img class="card__pic" src="..\mortgage-repayment-calculator-main\assets\images\illustration-empty.svg" alt="">
+                    <h2 class="card__results-a">Results shown here</h2>
+                    <p class="card__results-b">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+                </div>
+                
+                <div class="card__proces proces mortage-calculator__right-panel mortage-calculator__right-panel--results mortage-calculator__right-panel--hidden" id="mortage-calculator__results-panel">
+                    <div class="proces__text">
+                        <h2 class="proces__text-title">Your results</h2>
+                        <p class="proces__text-description">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+                    </div>
+
+                    <div class="proces__billing">
+                        <h4 class="billing__monthly">Your monthly repayments</h2>
+                        <h1 class="billing__monthly-result" id="monthlyResult">£{monthlyRepayment.toFixed(2)}</h1>
+                        <hr class="line">
+                        <h4 class="billing__total">Total you'll repay over the term</h2>
+                        <h2 class="billing__total-result" id="totalResult">£{totalRepayment.toFixed(2)}</h1>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+</body>
+</html>

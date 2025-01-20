@@ -1,0 +1,125 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
+body {
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;  
+    background-color: rgb(152, 152, 152);         
+    color: #333;                       
+}
+
+.bar_menu {
+    background-color: #1d1d1d;          
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 110px;
+    padding-left: 110px;
+}
+
+.bar_buttons button {
+    background-color: #ff5c4b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bar_buttons button:hover {
+    background-color: #ff3f2b;
+}
+
+hr {
+    width: 80%;
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 2rem auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    background-color: #ff5c4b;
+    border-radius: 15px;
+    padding: 1rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    /* margin: 0 auto; */
+}
+
+p {
+    font-weight: 600;
+}
+
+.complete_section {
+    padding-top: 50px;
+}
+
+.about_text, .project_text, .contact_text {
+    padding: 2em;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.project_section {
+    padding-top: 1em; 
+}
+
+.project_table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.project_table th, .project_table td {
+    padding: 1rem;
+    text-align: center;
+    word-wrap: break-word;        
+    overflow-wrap: break-word;    
+    white-space: normal;          
+    max-width: 250px;             
+    word-break: break-word;       
+}
+
+.project_table th {
+    background-color: #333;
+    color: white;
+}
+
+.project_table td {
+    background-color: #fff;
+    
+}
+
+.project_table_container {
+    max-height: 200px; 
+    overflow-y: auto;  
+    border: 2px solid #ccc; 
+    margin-bottom: 3em;
+}
+
+.contact_item img {
+    width: 50px;
+    height: 50px;
+}
+
+.contact_list {
+    list-style-type: none;
+    padding-right: 110px;
+    padding-left: 110px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.about_section, .project_section, .contact_section {
+    text-align: center; 
+}
+

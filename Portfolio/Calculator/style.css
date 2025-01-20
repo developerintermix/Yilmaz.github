@@ -1,0 +1,393 @@
+:root {
+    --slate-900: #133041;
+    --slate-700: #4E6E7E;
+    --slate-500: #6B94A8;
+    --slate-300: #9ABED5;
+    --slate-100: #E4F4FD;
+    --lime:      #D8DB2F;
+    --light-lime: #fdff9250;
+    --red:       #D73328;
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    src: url('/assets/fonts/fa-brands-400.woff2') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    src: url('/assets/fonts/fa-regular-400.woff2') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    src: url('/assets/fonts/fa-solid-900.woff2') format('woff');
+    font-weight: 900;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--slate-100);
+}
+
+.content-card {
+    display: flex;
+    max-width: 1008px;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+}
+
+.card__left {
+    flex: 1;
+    padding: 40px;
+    background-color: #ffffff;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--slate-900);
+}
+
+.card__reset-button {
+    background: none;
+    border: none;
+    color: var(--slate-700);
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.card__reset-button:hover {
+    color: var(--slate-900);
+}
+
+.card__amount,
+.card__terms,
+.card__type {
+    margin-top: 24px;
+}
+
+.card__amount div,
+.card__term-rate {
+    display: flex;
+    align-items: center;
+    border: 1px solid  var(--slate-500); 
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card__amount:hover {
+    border-color: var(--light-lime);
+}
+
+.card__term-rate {
+    width: 200px;
+}
+
+.invalid{
+    border-color: var(--red);
+}
+
+.card__amount-input.invalid .form__symbol {
+    background-color: var(--red);
+    color: white;
+}
+
+.card__amount-input.invalid
+{
+    border-color: var(--red);
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--slate-700);
+}
+
+label:first-of-type{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.repay,
+.interest {
+    color: var(--slate-900);
+}
+
+.form__symbol, 
+.card__term-rate p {
+    background-color: var(--slate-100);
+    padding: 10px;
+    border:  var(--slate-500);
+    border-right: 1px solid #ccc;
+    color: var(--slate-700);
+    font-weight: bold;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    text-align: center;
+}
+
+.card__term-rate input {
+    border: none; 
+    padding: 10px;
+    flex: 1;
+    width: 90px;
+}
+
+.input-field__icon {
+    color: var(--slate-700);
+    background-color: var(--slate-100);
+    padding: 12px;
+    padding-left: 14px;
+    padding-right: 13px;
+    font-weight: bold;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.invalid .input-field__icon {
+    color: white;
+    background-color: var(--red);
+}
+
+.form__symbol {
+    width: 20px;
+}
+
+.card__input {
+    width: 100%;
+    padding: 10px;
+    border: none; 
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--slate-900);
+    font-weight: bold;
+}
+
+.card__input:focus {
+    outline: none;
+}
+
+.card__terms {
+    display: flex;
+    gap: 24px;
+}
+
+.card__radio {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border: var(--slate-500) solid 1px;
+    border-radius: 7px;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.card__radio:hover {
+    border: var(--lime) solid 1px;
+}
+
+.card__radio p {
+    margin: 8px;
+    line-height: 1.2;
+    color: var(--slate-900);
+}
+
+/* Hieronder kan je de kleur aanpassen van de cirkel */
+/* .card__radio i {
+    color:aqua;
+} */
+
+.card__radio input {
+    display: none;
+}
+
+.card__radio input:checked + .fa-regular::before {
+    content: '\f192';
+    color: var(--lime);
+}
+
+label:has(input:checked) .card__radio {
+    border-color: var(--lime);
+    background-color: var(--light-lime);
+}
+
+.card__radio .fa-regular {
+    margin-right: 10px;
+}
+
+.card__radio label {
+    color: var(--slate-900);
+}
+
+.card__submit {
+    display: flex;
+    align-items: center;
+    width: 66%;
+    padding: 14px;
+    background-color: var(--lime);
+    color: var(--slate-900);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+}
+
+.card__submit:hover {
+    background-color: var(--light-lime);
+}
+
+.icon__calculator {
+    height: 22px;
+    width: auto;
+    vertical-align: middle;
+    padding-right: 15px;
+    padding-left: 19px;
+}
+
+
+/* Rechterzijde ------------------------------------------------------- */ 
+
+
+.mortage-calculator__right-content-holder {
+    padding-top: 100px
+}
+
+.card__right {
+    background-color: var(--slate-900);
+    color: white;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    border-bottom-left-radius: 90px;
+}
+
+.card__results-a {
+    margin: 16px;
+}
+
+.card__results-b {
+    color: var(--slate-300);
+}
+.card__results-b div {
+    background-color: var(--slate-300);
+    padding: 20px;
+    border-radius: 10px;
+}
+.card__results-b h2, 
+.card__results-b p {
+    color: white;
+    margin: 10px 0;
+}
+.card__results-b p {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--lime);
+}
+
+.hidden {
+    display: none;
+}
+
+.mortage-calculator__right-panel--hidden {
+    display: none;
+}
+
+.proces__billing {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    border-top: 5px solid var(--lime);
+    opacity: 2;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 40px;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.line {
+    border: none;
+    border-top: 1px solid var(--slate-300);
+    width: 320px;
+}
+
+.proces__text {
+    text-align: left;
+}
+
+.proces__text p{
+    color: var(--slate-300);
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.proces__text-title {
+    margin-top: 0;
+}
+
+.proces__text-description {
+    text-align: left;
+}
+
+.billing__monthly {
+    margin-top: 32px;
+    margin-bottom: 8px;
+    color: var(--slate-300);
+}
+
+.billing__monthly-result {
+    color: var(--lime);
+    font-weight: bold;
+    font-size: 56px;
+    margin-bottom: 32px;
+    margin-top: 12px;
+}
+
+.billing__total {
+    margin-top: 32px;
+    margin-bottom: 8px;
+    color: var(--slate-300);
+}
+
+.billing__total-result {
+    color: white;
+    font-weight: bold;
+    margin: 0px;
+}
